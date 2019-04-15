@@ -3,20 +3,21 @@
   2. Install node.js and install all dependencies by entering this in command line - install package.json
   3. Edit updown.js and passport.js file to use your database that is in your pc ( Mysql database). The database schema is :
   
-     +--------------+--------------+------+-----+-------------------+-------------------+
+  +--------------+--------------+------+-----+-------------------
      
-  | Field        | Type         | Null | Key | Default           | Extra             |
+  | Field        | Type         | Null | Key | Default           
   
-  +--------------+--------------+------+-----+-------------------+-------------------+
+  +--------------+--------------+------+-----+-------------------
   
-  | name         | varchar(20)  | NO   | PRI | NULL              |                   |
+  | name         | varchar(20)  | NO   | PRI | NULL              
   
-  | email        | varchar(30)  | NO   | UNI | NULL              |                   |
+  | email        | varchar(30)  | NO   | UNI | NULL              
   
-  | userPassword | varchar(100) | NO   |     | NULL              |                   |
+  | userPassword | varchar(100) | NO   |     | NULL              
   
-  | date         | timestamp    | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
+  | date         | timestamp    | YES  |     | CURRENT_TIMESTAMP 
   
-  +--------------+--------------+------+-----+-------------------+-------------------+
+  +--------------+--------------+------+-----+-------------------
+  
   4. Change directory in command line and execute "node mainnodefile" in the directory in which all downloaded files and folders reside.
   5. Now you can visit localhost in your browser with port 8000 and use the website.
