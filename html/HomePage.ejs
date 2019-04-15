@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/particles.css">
+
+    <title>Home</title>
+    <link href='css/HomePage.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(#c00 ,#f33)">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="      navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <a class="navbar-brand" href="signup">Sign Up</a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Options
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+            <a class="dropdown-item" href="upload" style="color :#ffaa00">Upload</a>
+            <a class="dropdown-item" href="download" style="color :#ffaa00">Download</a>
+            <div class="dropdown-divider"></div>
+            <% if(typeof username == 'undefined') {%>
+              <a class="dropdown-item" href="#" style="color :#ffaa00">Something else here</a>
+              <% } else { %>
+              <a class="dropdown-item" href="/delete-account" style="color :#ffaa00">Delete Account</a>
+            <% } %>
+            
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="float-right">
+        <% if(typeof username == 'undefined') {%>
+        <a class="navbar-brand" href="login">Log In</a>
+        <% } else { %>
+        <span class = "navbar-brand"> Welcome, <%= username %> </span>
+        <a class="navbar-brand" href="logout">Log Out</a>
+        <% } %>
+    </div>
+  </nav>
+    <h1>HOME</h1>
+    <img src="../images/wordcloud.png" id="WebDevWordCloud">
+    <div class = "HomePageContent"><br><br><br>
+    <h4>Project Made By:</h4>
+    <ul>
+      <li>Abhishek</li>
+      <li>Shreyas</li>
+      <li>Sohail</li>
+    </ul>
+  </div>
+    <script src="../javascript/jquery.js"></script>
+    <script src="../javascript/bootstrap.js"></script>
+    <script src = "../javascript/particles.js"></script>
+    <script src = "../javascript/app.js"></script>
+  </body>
+</html>

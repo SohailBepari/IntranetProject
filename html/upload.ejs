@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Simple Drive</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href='css/upload.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/particles.css">
+
+</head>
+<body>
+  <div id="particles-js" style="background-color:#ffcc66;"></div>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(#ffaa00 ,#ffcc66)">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="      navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <a class="navbar-brand" href="signup">Sign Up</a>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="upload" style="color :#c00">Upload</a>
+            <a class="dropdown-item" href="download" style="color :#c00">Download</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/delete-account" style="color :#c00">Delete Account</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="float-right">
+        <span class = "navbar-brand"> Welcome, <%= username %> </span>
+        <a class="navbar-brand" href="logout">Log Out</a>
+    </div>
+  </nav>
+<div class = "content">
+	<h3>Upload Your Files!!</h3>
+	<div class = "upload-form">
+	<form method = 'post' action='/upload' enctype="multipart/form-data" name="myForm">
+		<div id="yourBtn" onclick="getFile()">Choose a File
+		</div>
+		<div style="height: 0px;width: 0px; overflow:hidden;">
+		<input id="upfile" type="file" value="upload" onchange="sub(this)" name="filename"></div><br>
+    <input type="submit" value="Upload">
+	</form>
+	</div>
+</div>
+<script type="text/javascript">
+ function getFile(){
+   document.getElementById("upfile").click();
+ }
+ function sub(obj){
+    var file = obj.value;
+    var fileName = file.split("\\");
+    document.getElementById("yourBtn").innerHTML = fileName[fileName.length-1];
+    //document.myForm.submit();   //for automatic submission of form
+    event.preventDefault();
+  }
+</script>
+	<script src="../javascript/jquery.js"></script>
+  <script src="../javascript/bootstrap.js"></script>
+  <script src = "../javascript/particles.js"></script>
+  <script src = "../javascript/appUpload.js"></script>
+</body>
+</html>

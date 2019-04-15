@@ -1,0 +1,20 @@
+h1{
+  text-align: center;
+  color: #fff; 
+}
+h4, .HomePageContent{
+	color: #fff;
+}
+#WebDevWordCloud{
+  width:44%;
+  margin: auto;
+  float: left;
+}
+@media screen and (max-width: 600px) {
+  #WebDevWordCloud{
+     width: 100%;
+  }
+  span[class = "navbar-brand"]{
+  	display: none;
+  }
+}
