@@ -10,6 +10,6 @@
     userPassword varchar(100) not null,
     date timestamp default CURRENT_TIMESTAMP
   }
-  <pre/>
+  </pre>
   4. Change directory in command line and execute "node mainnodefile" in the directory in which all downloaded files and folders reside.
   5. Now you can visit localhost in your browser with port 8000 and use the website.
