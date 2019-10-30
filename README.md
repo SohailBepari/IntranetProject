@@ -5,10 +5,10 @@
   3. Edit updown.js and passport.js file and enter your MySQL database credentials. The database schema is :
   <pre>
   {
-    name varchar(20) not null Primary Key,
-    email varchar(30) not null unique,
-    userPassword varchar(100) not null,
-    date timestamp default CURRENT_TIMESTAMP
+    name            varchar(20)   not null Primary Key,
+    email           varchar(30)   not null unique,
+    userPassword    varchar(100)  not null,
+    date timestamp  default CURRENT_TIMESTAMP
   }
   </pre>
   4. Change directory in command line and execute "node mainnodefile" in the directory in which all downloaded files and folders reside.
