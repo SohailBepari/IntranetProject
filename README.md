@@ -1,5 +1,5 @@
   The project is to make an offline storage system like drive with a login system.To use the project, do the following:
-  1. Download all the files and folders in the repository as it is and copy all of it in a suitbale folder( preferably in F drive).
+  1. Download all the files and folders in the repository as it is and copy all of it in a suitable folder( preferably in F drive).
   2. Install node.js and install all dependencies by entering this in command line - npm install
   3. Edit updown.js and passport.js file to use your database that is in your pc ( Mysql database). The database schema is :
   
